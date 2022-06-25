@@ -2,11 +2,37 @@ nums = [29, 15, 10, 4, 5, 12];
 
 for(var i = 0; i < nums.length; i++) {
     var num = nums[i];
-    console.log(num);
+    evenfy(num)
+   
+    // if(num % 2 == 0) {
+    //     console.log(num, "this number is oven")
+    // }
+    // else{
+    //     console.log(num*2, " this number is odd");
+    // }
+}
+
+student = [20, 40, 3, 5, 7, 10]
+
+for(var i = 0; i < student.length; i++) {
+    var age = student[i];
+    evenfy(age)
+
+    // if(age % 2 == 0) {
+    //     console.log(age, "this number is oven");
+    // }
+    // else{
+    //     console.log(age, "this number is odd");
+    // }
+}
+
+function evenfy (num) {
     if(num % 2 == 0) {
-        console.log("oven")
+        console.log(num, "this number is oven")
     }
     else{
-        console.log("odd");
+        console.log(num*2, " this number is odd");
     }
 }
+
+evenfy(num);
