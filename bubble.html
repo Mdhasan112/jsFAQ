@@ -16,17 +16,33 @@
             <li class="item">Voluptas, aut nesciunt.</li>
             <li class="item">Eius, cupiditate recusandae!</li>
         </ul>
+        <button id="addNew">Click Me</button>
     </div>
     <script>
-        document.getElementById('first').addEventListener('click', function () {
-            console.log('hello how are you')
+        // var items = document.getElementsByClassName('item');
+        // for (let i = 0; i < items.length; i++) {
+        //     const item = items[i];
+        //     item.addEventListener("click", function() {
+        //         event.target.parentNode.removeChild(event.target);
+        //     }) 
+        // }
+        document.getElementById('addNew').addEventListener('click', function(event) {
+            var itemParent = document.getElementById('myList');
+            var newItem = document.createElement('li');
+            newItem.innerText = "I am new item";
+            itemParent.appendChild(newItem)
         })
+        // document.getElementById('first').addEventListener('click', function () {
+        //     console.log('hello how are you')
+        // })
         document.getElementById('myList').addEventListener('click', function () {
-            console.log('this is my list')
+            event.target.parentNode.removeChild(event.target);
+            // console.log('this is my list')
+            // event.stopPropagation();
         })
-        document.getElementById('container').addEventListener('click', function () {
-            console.log('this is container')
-        })
+        // document.getElementById('container').addEventListener('click', function () {
+        //     console.log('this is container')
+        // })
     </script>
 </body>
 </html>
